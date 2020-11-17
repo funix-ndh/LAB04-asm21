@@ -1,0 +1,2 @@
+insert into wishlist values
+(1, 'Claritas est etiam processus (www.weddingshop.com)\nEodem modo typi nobis videntur parum\nDuis autem vel eum iriure dolor\nClaritas est etiam processus\nEodem modo typi nobis videntur parum (www.weddingshop.com)\nDuis autem vel eum iriure dolor (www.weddingshop.com)\nClaritas est etiam processus\nEodem modo typi nobis videntur parum\nDuis autem vel eum iriure dolor\nClaritas est etiam processus\nEodem modo typi nobis videntur parum\nDuis autem vel eum iriure dolor\n')

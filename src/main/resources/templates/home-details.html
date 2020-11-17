@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+<div layout:fragment="content">
+
+  <!-- render list of wedding blog -->
+  <div class="row wedding-blog-item">
+
+    <!-- render wedding blog icon -->
+    <div class="col-1 wedding-blog-item-icon">
+      <i th:if="${weddingBlog.postType == 'PHOTO'}" class="fa fa-camera-retro" aria-hidden="true">
+        <a></a>
+      </i>
+      <i th:if="${weddingBlog.postType == 'POEM'}" class="fa fa-birthday-cake" aria-hidden="true"></i>
+      <i th:if="${weddingBlog.postType == 'PHOTO_AND_PARAGRAPH'}" class="fa fa-pencil" aria-hidden="true"></i>
+      <i th:if="${weddingBlog.postType == 'QUOTE'}" class="fa fa-quote-left" aria-hidden="true"></i>
+    </div>
+
+    <!-- render wedding blog title -->
+    <div class="col-11">
+      <div class="d-flex">
+        <div class="mr-auto p-2"><p th:text="${weddingBlog.title}"
+                                    class="wedding-blog-item-title page-title"></p></div>
+        <div class="p-2 wedding-blog-item-publish-date" th:text="${weddingBlog.publishedDate}"></div>
+      </div>
+
+      <!-- render wedding blog content -->
+      <div class="row p-2">
+
+        <!-- render wedding blog image url of PHOTO type -->
+        <img th:if="${weddingBlog.postType == 'PHOTO'}" th:src="${weddingBlog.imgUrl}" class="img-fluid rounded"
+             alt="wedding-image" />
+
+        <!-- render wedding blog paragraph of POEM type -->
+        <blockquote th:if="${weddingBlog.postType == 'POEM'}" class="block-left">
+          <p
+            th:utext="${#strings.replace(#strings.escapeXml(weddingBlog.paragraph),T(java.lang.System).getProperty('line.separator'),'&lt;br /&gt;')}"></p>
+        </blockquote>
+
+        <!-- render wedding blog image & paragraph of PHOTO_AND_PARAGRAPH type -->
+        <div th:if="${weddingBlog.postType == 'PHOTO_AND_PARAGRAPH'}" class="col-6">
+          <img th:src="${weddingBlog.imgUrl}" class="img-fluid rounded" alt="wedding-image" />
+        </div>
+        <div th:if="${weddingBlog.postType == 'PHOTO_AND_PARAGRAPH'}" class="col-6">
+          <p
+            th:utext="${#strings.replace(#strings.escapeXml(weddingBlog.paragraph),T(java.lang.System).getProperty('line.separator'),'&lt;br /&gt;')}"></p>
+        </div>
+
+        <!-- render wedding blog paragraph of QUOTE type -->
+        <div th:if="${weddingBlog.postType == 'QUOTE'}" class="col-12 float-right">
+          <blockquote class="block-right">
+            <p class="text-right"
+               th:utext="${#strings.replace(#strings.escapeXml(weddingBlog.paragraph),T(java.lang.System).getProperty('line.separator'),'&lt;br /&gt;')}"></p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="/overview"><p class="wedding-blog-overview text-center">Overview</p></a>
+</div>
+</body>
+</html>

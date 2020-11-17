@@ -1,0 +1,42 @@
+<div th:fragment="header" xmlns:th="http://www.thymeleaf.org" class="banner">
+  <div class="row">
+    <div class="col-2 d-flex align-items-center justify-content-center">
+      <a href="/"><i class="fa fa-heart color-banner logo" aria-hidden="true"></i></a>
+    </div>
+    <div class="col-10">
+      <div class="row">
+        <a class="color-banner blog-title" href="/">Maria and Paul's Wedding</a>
+      </div>
+      <div class="row">
+        <p class="text-left">Welcome to our website</p>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light row menubar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav" th:with="view=${#httpServletRequest.getServletPath()}">
+      <ul class="navbar-nav">
+        <li
+          th:classappend="'nav-item' + ${#strings.startsWith(view,'/') && #strings.endsWith(view, '/')? ' active' : ''}">
+          <a class="nav-link" href="/">Wedding Blog</a>
+        </li>
+        <li th:classappend="'nav-item' + ${#strings.startsWith(view,'/photo-album')? ' active' : ''}">
+          <a class="nav-link" th:href="@{/photo-album}">Photo Album</a>
+        </li>
+        <li th:classappend="'nav-item' + ${#strings.startsWith(view,'/wishlist')? ' active' : ''}">
+          <a class="nav-link" th:href="@{/wishlist}">Wishlist</a>
+        </li>
+        <li th:classappend="'nav-item' + ${#strings.startsWith(view,'/guestbook')? ' active' : ''}">
+          <a class="nav-link" th:href="@{/guestbook}">GuestBook</a>
+        </li>
+        <li th:classappend="'nav-item' + ${#strings.startsWith(view,'/party-address')? ' active' : ''}">
+          <a class="nav-link" th:href="@{/party-address}">Party Address</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,9 @@
+insert into photo_album values
+(1, 'http://cdn.simplesite.com/i/c3/43/282319408040068035/i282319414620602133._szw360h270_.jpg'),
+(2, 'http://cdn.simplesite.com/i/c3/43/282319408040068035/i282319414620602124._szw360h270_.jpg'),
+(3, 'http://cdn.simplesite.com/i/c3/43/282319408040068035/i282319414620602132._szw360h270_.jpg'),
+(4, 'http://cdn.simplesite.com/i/c3/43/282319408040068035/i282319414620602127._szw360h270_.jpg'),
+(5, 'http://cdn.simplesite.com/i/c3/43/282319408040068035/i282319414620602136._szw360h270_.jpg'),
+(6, 'http://cdn.simplesite.com/i/c3/43/282319408040068035/i282319414620602131._szw360h270_.jpg'),
+(7, 'http://cdn.simplesite.com/i/c3/43/282319408040068035/i282319414620602093._szw360h270_.jpg'),
+(8, 'http://cdn.simplesite.com/i/c3/43/282319408040068035/i282319414620602125._szw360h270_.jpg')

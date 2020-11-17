@@ -1,0 +1,168 @@
+body {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+  background-color: #e4ddd3;
+  background-image: url("http://css.simplesite.com/images/v3/backgrounds/patterns/body/princess.png");
+  background-repeat: repeat;
+}
+
+.blog {
+  box-shadow: 0 0 24px rgba(0, 0, 0, .8);
+  background: white;
+}
+
+.color-banner {
+  color: #948450;
+}
+
+.banner {
+  padding: 0 30px 0 0;
+}
+
+.logo {
+  font-size: 80px;
+}
+
+.blog-title {
+  font-family: 'Great Vibes', cursive, Helvetica, Arial, sans-serif;
+  font-size: 56px;
+}
+
+.menubar {
+  background-color: #f0e2bd;
+  text-decoration: none;
+  color: black;
+}
+
+.social-network-box {
+  padding: 10px;
+  margin: 10px;
+}
+
+.social-network-box {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+}
+
+.social-network-box a {
+  color: black;
+  text-decoration: underline;
+}
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, .2);
+  padding: 20px 0;
+}
+
+.footer-box {
+  padding: 10px 20px;
+}
+
+.footer-page-counter-item {
+  font-family: Arial, Helvetica, Arial, sans-serif;
+  line-height: 15px;
+  padding: 2px;
+  margin: 1px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px #595959;
+  float: left;
+  font-weight: 700;
+  position: relative;
+}
+
+.footer-page-counter-item:before {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 52%;
+  margin-top: -1px;
+  background: rgba(0, 0, 0, .25);
+  width: 100%;
+}
+
+.content {
+  padding: 30px;
+}
+
+.heading {
+}
+
+.page-title {
+  font-family: 'Great Vibes', cursive, Helvetica, Arial, sans-serif;
+  font-size: 36px !important;
+  line-height: 34px !important;
+}
+
+.wedding-blog-item {
+  border-bottom-width: 3px;
+  border-bottom-style: dotted;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.wedding-blog-item-icon {
+  font-size: 40px;
+}
+
+.wedding-blog-item-title {
+  text-decoration: underline;
+  color: black;
+  font-size: 20px;
+}
+
+.wedding-blog-item-publish-date {
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+.block-left {
+  padding: 0 0 0 15px;
+  margin: 0 0 22px;
+  border-left: 5px solid #000;
+}
+
+.block-right {
+  padding: 0 15px 0 0;
+  margin: 0 0 22px;
+  border-right: 5px solid #000;
+}
+
+.wedding-blog-overview {
+  margin-top: 20px;
+  text-decoration: underline;
+  color: black;
+}
+
+.overview-link {
+  text-decoration: underline;
+  color: black;
+}
+
+.photo-album-img {
+  border: 1px solid #ddd;
+  padding: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+}
+
+.add-msg-btn {
+  background-color: #c9b275;
+  border-radius: 18px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.guestbook-link {
+  text-decoration: underline;
+  color: black;
+}
+
+.party-address-email {
+  text-decoration: underline;
+  color: black;
+}
+
+.party-address-border {
+  border-bottom: 3px dotted rgba(0,0,0,.2);
+}

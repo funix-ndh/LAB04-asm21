@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    container_name: db
+    image: mysql:8.0
+    ports:
+    - 3306:3306
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 'asm21'
+      MYSQL_DATABASE: asm21
+      MYSQL_USER: asm21
+      MYSQL_PASSWORD: asm21
+    volumes:
+      - ./data:/var/lib/mysql

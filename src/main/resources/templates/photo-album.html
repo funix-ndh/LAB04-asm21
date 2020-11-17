@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+<div layout:fragment="content">
+  <div class="row">
+    <h1 class="page-title">Photo Album</h1>
+  </div>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li th:each="item, iter : ${photoAlbumList}" data-target="#carouselExampleIndicators"
+          th:class="${iter.index == 0 ? 'active' : ''}"
+          th:attr="data-slide-to=${iter.index}"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div th:class="'carousel-item ' + ${iter.index == 0 ? 'active' : ''}"
+           th:each="item, iter : ${photoAlbumList}">
+        <img class="d-block w-100 rounded" height="450" th:src="${item.imgUrl}" />
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div class="row p-2">
+    <img th:each="item, iter : ${photoAlbumList}" class="photo-album-img rounded h-25 w-25" th:src="${item.imgUrl}" />
+  </div>
+
+</div>
+</body>
+</html>

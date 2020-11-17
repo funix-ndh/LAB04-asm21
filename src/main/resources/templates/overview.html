@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+<div layout:fragment="content">
+  <div class="row">
+    <h1 class="page-title">Overview - Wedding Blog</h1>
+  </div>
+  <div class="table-responsive">
+    <table class="table" th:each="item : ${weddingBlogList}">
+      <thead>
+      <tr>
+        <th scope="col" th:text="${#temporals.format(item.getKey(), 'MMM yyyy')}"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th style="text-align:right;" scope="col">Date</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="obj : ${item.getValue()}">
+        <td style="width: 50%"><a th:href="@{/details/{id}(id=${obj.id})}" th:text="${obj.title}"
+                                  class="overview-link"></a></td>
+        <td style="width: 10%"><i class="fa fa-thumbs-up" th:text="' ' + ${obj.likeCount}"></i></td>
+        <td style="width: 10%"><i class="fa fa-comment" th:text="' '+ ${obj.commentCount}"></i></td>
+        <td style="text-align:right;"><p th:text="${obj.publishedDate}"></p></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
